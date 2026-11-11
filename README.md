@@ -107,6 +107,12 @@ nios_eth_web/
 
 ## Build (já feito; repita se alterar algo)
 
+O repositório já traz os arquivos gerados: HDL do Qsys (`hw/soc/synthesis`), `hw/soc.sopcinfo`,
+BSP (`sw/bsp`), `sw/app/Makefile` e o hex da RAM (`sw/app/mem_init`). Por isso dá para abrir
+`hw/nios_eth.qpf` no Quartus 17.1 e compilar direto (*Processing → Start Compilation*), ou
+rodar `make` em `sw/app`, sem regenerar nada. Os scripts abaixo só são necessários se você
+mudar o Qsys.
+
 O software do Nios fica **embutido no `.sof`** (RAM on-chip inicializada com
 `sw/app/mem_init/soc_ram.hex`). Basta programar a FPGA, e o Nios começa a rodar
 sozinho; num PC de laboratório só é preciso o Quartus Programmer.

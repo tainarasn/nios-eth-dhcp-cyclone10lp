@@ -1,23 +1,27 @@
-# --- Quartus (gerado)
+# Caches do Quartus (grandes e especificos de cada maquina)
 hw/db/
 hw/incremental_db/
-hw/output_files/*
-!hw/output_files/nios_eth.sof
 hw/*.log
 hw/*.qws
 hw/*.bak
 hw/.qsys_edit/
-# --- Platform Designer (gerado por soc_qsys.tcl / qsys-generate)
-hw/soc/
-hw/soc.sopcinfo
-# --- ModelSim
+
+# Saidas do Quartus: mantem o .sof e o mapa de pinos; relatorios (com caminhos locais) ficam fora
+hw/output_files/*
+!hw/output_files/nios_eth.sof
+!hw/output_files/nios_eth.pin
+
+# Platform Designer: mantem o HDL gerado (hw/soc/synthesis) e o .sopcinfo; logs ficam fora
+hw/soc/*
+!hw/soc/synthesis/
+
+# ModelSim
 hw/sim/work/
 hw/sim/transcript
 hw/sim/*.wlf
-# --- Nios II SBT (gerado por create_sw.sh / make)
-sw/bsp/
+
+# Nios II SBT: objetos e listagens (o BSP, o Makefile e o mem_init sao versionados)
 sw/app/obj/
-sw/app/Makefile
-sw/app/mem_init/
 sw/app/*.map
 sw/app/*.objdump
+sw/bsp/obj/
