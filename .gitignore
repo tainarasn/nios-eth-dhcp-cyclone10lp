@@ -1,0 +1,23 @@
+# --- Quartus (gerado)
+hw/db/
+hw/incremental_db/
+hw/output_files/*
+!hw/output_files/nios_eth.sof
+hw/*.log
+hw/*.qws
+hw/*.bak
+hw/.qsys_edit/
+# --- Platform Designer (gerado por soc_qsys.tcl / qsys-generate)
+hw/soc/
+hw/soc.sopcinfo
+# --- ModelSim
+hw/sim/work/
+hw/sim/transcript
+hw/sim/*.wlf
+# --- Nios II SBT (gerado por create_sw.sh / make)
+sw/bsp/
+sw/app/obj/
+sw/app/Makefile
+sw/app/mem_init/
+sw/app/*.map
+sw/app/*.objdump
